@@ -8,6 +8,8 @@ import Register from './pages/Auth/Register'
 import ForgotPassword from './pages/Auth/ForgotPassword'
 import DashboardLayout from './layouts/DashboardLayout'
 import Dashboard from './pages/Dashboard/Dashboard'
+import Airtime from './pages/Dashboard/Airtime'
+import Data from './pages/Dashboard/Data'
 
 const App: React.FC = () => {
   return (
@@ -24,6 +26,8 @@ const App: React.FC = () => {
 
       <Route path="/" element={<DashboardLayout />}>
         <Route path="dashboard" element={<Dashboard />} />
+        <Route path="services/airtime" element={<Airtime />} />
+        <Route path="services/data" element={<Data />} />
       </Route>
     </Routes>
   )

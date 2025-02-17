@@ -1,5 +1,6 @@
 import { GraduationCap, Lightbulb, Mail, Phone, Wifi } from "lucide-react";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const services = [
   {
@@ -33,9 +34,10 @@ const Services: React.FC = () => {
   return (
     <div className="space-y-6 shadow-lg border rounded-2xl p-6 bg-white">
       {/* <h2 className="text-xl font-semibold text-gray-800">Services</h2> */}
-      <div className="grid grid-cols-2 gap-5 md:grid-cols-5">
+      <div className="grid grid-cols-3 sm:grid-cols-4 gap-5 md:grid-cols-5">
         {services.map((service) => (
-          <div
+          <Link
+          to={`/services/${service.name.toLowerCase().replace(" ", "-")}`}
             key={service.name}
             className="flex flex-col items-center space-y-3 rounded-xl hover:shadow-md transition cursor-pointer"
           >
@@ -43,7 +45,7 @@ const Services: React.FC = () => {
               {service.icon}
             </div>
             <span className="text-sm font-medium text-gray-700">{service.name}</span>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

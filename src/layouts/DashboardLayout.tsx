@@ -7,10 +7,11 @@ const DashboardLayout: React.FC = () => {
   return (
     <div className='flex'>
         <Sidebar />
-        <div className='shrink-0 w-[700px] p-5'>
+        <div className='shrink-0 w-[700px] p-5 relative'>
             <Outlet />
         </div>
         <NetworkUssdCodes />
+        
     </div>
   )
 }

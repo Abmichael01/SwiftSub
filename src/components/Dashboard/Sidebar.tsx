@@ -14,7 +14,7 @@ const sidebarItems = [
 const Sidebar: React.FC = () => {
     const location = useLocation()
   return (
-    <div className="w-[200px] border-r h-screen p-4 bg-white dark:bg-gray-900 sticky top-0 shrink-0 flex flex-col gap-10 items-center">
+    <div className="w-[200px] border-r h-screen p-4 bg-white dark:bg-gray-900 sticky top-0 shrink-0 md:flex flex-col gap-10 items-center hidden ">
         <Logo />
       <nav className="space-y-4 in-hover:bg-black w-full h-fit">
         {sidebarItems.map((item) => (

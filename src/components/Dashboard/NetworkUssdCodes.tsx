@@ -2,7 +2,7 @@ import React from 'react'
 
 const NetworkUssdCodes: React.FC = () => {
   return (
-    <div className='border-l '>
+    <div className='border-l hidden md:block'>
 
     </div>
   )
