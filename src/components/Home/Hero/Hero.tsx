@@ -45,7 +45,7 @@ const Hero: React.FC = () => {
         />
 
         <CursorEffect
-          className="right-[34%] sm:right-[20%] md:right-[25%] top-[1%] hidden min-[300px]:flex"
+          className="right-[34%] md:right-[25%] top-[1%] hidden min-[300px]:flex"
           color="green"
           side="right"
           text="Airtime & Data Deals"
