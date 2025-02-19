@@ -6,7 +6,7 @@ import React from "react";
 const Dashboard: React.FC = () => {
   
   return (
-    <div className="space-y-10">
+    <div className="space-y-10 w-full">
       <Wallet />
       <Services />
       <RecentTransactions />
