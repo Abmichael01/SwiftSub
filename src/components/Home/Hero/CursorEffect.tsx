@@ -37,7 +37,7 @@ const CursorEffect: React.FC<Props> = ({ className, color, side, text, icon, del
   const bounceX = side === "right" ? -10 : 10; // Small bounce effect before stopping
 
   return (
-    <div className={cn("absolute", className)}>
+    <div className={cn("absolute scale-[0.9] md:scale-[1]", className)}>
       <div className="relative">
         {/* Icon container */}
         <motion.div

@@ -9,7 +9,7 @@ interface Props {
 const SectionPadding: React.FC<Props> = ({ className, children }) => {
   return (
     <div className={cn(
-        "px-20",
+        "md:px-20 sm:psx-10 p-5 ",
         className
     )}>
         {children}

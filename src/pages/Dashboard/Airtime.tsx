@@ -20,7 +20,6 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Link } from "react-router-dom";
-import TransactionSummary from "@/components/Dashboard/Dashboard/TransactionSummary";
 import { useTransactionStore } from "@/stores/transactionStore";
 
 // Define Zod Schema
@@ -66,7 +65,7 @@ const Airtime: React.FC = () => {
     <div className="space-y-6">
       {/* Header */}
       <div className="flex gap-5 items-center px-3 py-3 border rounded-xl">
-        <Link to="/dashboard">
+        <Link to="/dashboard" className="text-primary">
           <ArrowLeft />
         </Link>
         <h2 className="text-lg font-semibold">Airtime</h2>
@@ -83,7 +82,7 @@ const Airtime: React.FC = () => {
               <FormItem>
                 <FormLabel>Phone Number</FormLabel>
                 <FormControl>
-                  <Input type="tel" placeholder="Enter phone number" {...field} />
+                  <Input type="tel" placeholder="Enter phone number" {...field} className="py-5" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -98,7 +97,7 @@ const Airtime: React.FC = () => {
               <FormItem>
                 <FormLabel>Amount (₦)</FormLabel>
                 <FormControl>
-                  <Input type="number" placeholder="Enter amount" {...field} />
+                  <Input type="number" placeholder="Enter amount" {...field} className="py-5" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -114,7 +113,7 @@ const Airtime: React.FC = () => {
                 <FormLabel>Select Network</FormLabel>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
-                    <SelectTrigger>
+                    <SelectTrigger className="py-5">
                       <SelectValue placeholder="Choose Network" />
                     </SelectTrigger>
                   </FormControl>
@@ -132,14 +131,14 @@ const Airtime: React.FC = () => {
           />
 
           {/* Submit Button */}
-          <Button type="submit" className="w-full flex items-center justify-center" disabled={isSubmitting}>
+          <Button type="submit" className="w-full flex items-center justify-center py-5 cursor-pointer" disabled={isSubmitting}>
             {isSubmitting ? <Loader2 className="w-5 h-5 animate-spin" /> : "Buy Airtime"}
           </Button>
         </form>
       </Form>
 
       {/* Order Summary Drawer */}
-      <TransactionSummary />
+      
     </div>
   );
 };
