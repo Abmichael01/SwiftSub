@@ -11,6 +11,7 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 import Airtime from "./pages/Dashboard/Airtime";
 import Data from "./pages/Dashboard/Data";
 import TransactionLayout from "./layouts/TransactionLayout";
+import Transactions from "./pages/Dashboard/Transactions";
 
 const App: React.FC = () => {
   return (
@@ -27,6 +28,7 @@ const App: React.FC = () => {
 
       <Route path="/" element={<DashboardLayout />}>
         <Route path="dashboard" element={<Dashboard />} />
+        <Route path="transactions" element={<Transactions />} />
         <Route element={<TransactionLayout />}>
           <Route path="services/airtime" element={<Airtime />} />
           <Route path="services/data" element={<Data />} />

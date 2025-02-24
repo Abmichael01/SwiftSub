@@ -39,22 +39,21 @@ const statusColors: Record<string, string> = {
 };
 
 const statusIcons: Record<string, JSX.Element> = {
-  Success: <CheckCircle className="w-5 h-5 text-green-500 " />,
+  Success: <CheckCircle className="w-5 h-5 text-green-500" />,
   Pending: <Clock className="w-5 h-5 text-yellow-500" />,
   Failed: <XCircle className="w-5 h-5 text-red-500" />,
 };
 
-const RecentTransactions: React.FC = () => {
+const Transactions: React.FC = () => {
   return (
-    <div className="space-y-6 shadow-lg border rounded-2xl p-6 bg-background">
-      <h2 className="text-lg font-semibold text-gray-800">Recent Transactions</h2>
+    <div>
       <div className="space-y-4">
         {transactions.map((tx) => (
-          <div key={tx.id} className="flex items-center justify-between p-4 rounded-lg bg-gray-50 dark:bg-background/50 hover:shadow transition">
+          <div key={tx.id} className="flex items-center justify-between p-4 rounded-lg bg-gray-50 dark:bg-background hover:shadow transition">
             <div className="flex items-center gap-3">
               {statusIcons[tx.status]}
               <div>
-                <p className="text-sm font-medium">{tx.name}</p>
+                <p className="text-sm font-medium ">{tx.name}</p>
                 <p className="text-xs text-foreground/50">{tx.time}</p>
               </div>
             </div>
@@ -68,7 +67,7 @@ const RecentTransactions: React.FC = () => {
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default RecentTransactions;
+export default Transactions

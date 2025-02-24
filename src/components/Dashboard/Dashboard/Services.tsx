@@ -32,7 +32,7 @@ const services = [
 
 const Services: React.FC = () => {
   return (
-    <div className="space-y-6 shadow-lg border rounded-2xl p-6 bg-white">
+    <div className="space-y-6 shadow-lg border rounded-2xl p-6 bg-background">
       {/* <h2 className="text-xl font-semibold text-gray-800">Services</h2> */}
       <div className="grid grid-cols-3 sm:grid-cols-4 gap-5 md:grid-cols-5">
         {services.map((service) => (
@@ -44,7 +44,7 @@ const Services: React.FC = () => {
             <div className={`p-3 rounded-full ${service.bgColor}`}>
               {service.icon}
             </div>
-            <span className="text-sm font-medium text-gray-700">{service.name}</span>
+            <span className="text-sm font-medium text-foreground/80">{service.name}</span>
           </Link>
         ))}
       </div>

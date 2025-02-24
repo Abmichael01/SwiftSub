@@ -8,7 +8,6 @@ import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { Link } from "react-router-dom"
-import TransactionSummary from "@/components/Dashboard/Dashboard/TransactionSummary"
 import { useTransactionStore } from "@/stores/transactionStore"
 
 // Define Zod Schema
@@ -77,7 +76,7 @@ const Data: React.FC = () => {
               <FormItem>
                 <FormLabel>Phone Number</FormLabel>
                 <FormControl>
-                  <Input type="tel" placeholder="Enter phone number" {...field} />
+                  <Input type="tel" placeholder="Enter phone number" {...field} className="py-5" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -93,7 +92,7 @@ const Data: React.FC = () => {
                 <FormLabel>Select Network</FormLabel>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
-                    <SelectTrigger>
+                    <SelectTrigger className="py-5">
                       <SelectValue placeholder="Choose Network" />
                     </SelectTrigger>
                   </FormControl>
@@ -119,7 +118,7 @@ const Data: React.FC = () => {
                 <FormLabel>Select Data Plan</FormLabel>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
-                    <SelectTrigger>
+                    <SelectTrigger className="py-5">
                       <SelectValue placeholder="Choose Data Plan" />
                     </SelectTrigger>
                   </FormControl>
@@ -142,9 +141,6 @@ const Data: React.FC = () => {
           </Button>
         </form>
       </Form>
-
-      {/* Order Summary Drawer */}
-      <TransactionSummary />
     </div>
   )
 }

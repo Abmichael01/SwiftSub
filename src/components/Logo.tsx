@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import { Zap } from "lucide-react";
 import React from "react";
 import { Link } from "react-router-dom";
@@ -13,9 +14,12 @@ const Logo: React.FC<Props> = ({ icon }) => {
       <Zap className="text-primary" size={30} />
 
       {/* Brand Name */}
-     {!icon && (
-       <h2 className="text-xl font-semibold tracking-wide">SwiftSub</h2>
-     )}
+     {/* {!icon && ( */}
+       <h2 className={cn(
+        "text-xl font-semibold tracking-wide transition-all duration-500 overflow-hidden",
+        icon ? "size-0" : "size-fit"
+       )}>SwiftSub</h2>
+     {/* )} */}
     </Link>
   );
 };

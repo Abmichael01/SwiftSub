@@ -14,7 +14,7 @@ const TransactionSummary: React.FC = () => {
   const hasInsufficientFunds = balance < transaction.amount
 
   return (
-    <div className="absolute inset-0 bg-black/40 flex items-end z-50 overflow-hidden">
+    <div className="absolute inset-0 bg-black/40 flex items-end z-50 overflow-hidden h-full">
       <div className="absolute inset-0" onClick={closeTransaction} />
 
       <motion.div
@@ -22,11 +22,11 @@ const TransactionSummary: React.FC = () => {
         animate={{ y: 0 }}
         exit={{ y: "100%" }}
         transition={{ type: "spring", stiffness: 100, damping: 15 }}
-        className="relative w-full bg-white rounded-t-2xl p-6 shadow-lg"
+        className="relative w-full bg-background rounded-t-2xl p-6 shadow-lg"
       >
         <button
           onClick={closeTransaction}
-          className="absolute top-4 right-4 p-2 rounded-full bg-gray-200 hover:bg-gray-300"
+          className="absolute top-4 right-4 p-2 rounded-full dark:bg-gray-800 dark:hover:bg-gray-700 bg-gray-200 hover:bg-gray-300"
         >
           <X className="w-5 h-5" />
         </button>
